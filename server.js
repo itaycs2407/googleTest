@@ -21,6 +21,8 @@ app.delete("/test_delete_method", (req, res) => {
   res.status(201).send({ message: "response from delete" });
 });
 
-const server = app.listen(9589, () => {
+const port = parseInt(process.env.PORT) || 8080;
+
+const server = app.listen(port, () => {
   console.log("Server listening on port 9589...\n");
 });
